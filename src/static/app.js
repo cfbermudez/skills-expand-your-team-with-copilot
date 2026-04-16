@@ -455,10 +455,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Apply difficulty filter
       if (currentDifficulty) {
-        const activityDifficulty = details.difficulty || "";
         // Activities with no difficulty are for all levels, so always include them.
         // Activities with a set difficulty must match the selected level.
-        if (activityDifficulty && activityDifficulty !== currentDifficulty) {
+        if (details.difficulty && details.difficulty !== currentDifficulty) {
           return;
         }
       }
